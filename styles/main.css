@@ -90,7 +90,7 @@ html, body {
 
 main {
   position: relative;
-  height: calc(100% - 11rem - 2rem);
+  height: calc(100% - 11rem - 3rem);
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -296,15 +296,19 @@ header .site-slogan {
 }
 
 footer {
-  background-color: black;
+  background-color: #1770c1;
   color: white;
-  height: 2rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
+  padding: 0 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

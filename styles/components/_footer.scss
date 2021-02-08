@@ -1,8 +1,10 @@
 footer {
-  background-color: black;
+  background-color: #1770c1;
   color: white;
   height: $footer-height;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  padding: 0 1.5rem;
 }
