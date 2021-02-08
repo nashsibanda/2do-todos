@@ -82,9 +82,18 @@ input[type="submit"] {
   clear: both;
 }
 
-body {
+html, body {
   font-family: "Lato", sans-serif;
   background-color: #555;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  height: calc(100% - 11rem - 2rem);
+  padding: 1rem 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1,
@@ -105,8 +114,20 @@ h3 {
   font-size: 1.3rem;
 }
 
+#add-todo-button {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  border-radius: 50%;
+  background: #52b0e9;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
 header {
-  padding: 1.5rem 0;
+  height: 11rem;
   background-color: #52b0e9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -118,6 +139,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
 }
 
@@ -130,7 +154,7 @@ header .site-slogan {
 }
 
 .todo-list {
-  margin: 1rem auto 0;
+  margin: 0 auto;
   padding: 0 1rem;
   max-width: 800px;
   display: -webkit-box;
@@ -269,5 +293,18 @@ header .site-slogan {
   position: absolute;
   top: 0;
   left: 5px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

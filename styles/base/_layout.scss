@@ -1,6 +1,14 @@
-body {
+html, body {
   font-family: $sans-serif;
   background-color: #555;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  height: calc(100% - #{$header-height} - #{$footer-height});
+  padding: 1rem 0;
+  box-sizing: border-box;
 }
 
 h1,
@@ -19,4 +27,16 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
+}
+
+#add-todo-button {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  border-radius: 50%;
+  background: $blue;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
