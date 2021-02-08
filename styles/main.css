@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Oregano&display=swap");
 html,
 body,
@@ -83,6 +84,7 @@ input[type="submit"] {
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: #555;
 }
 
 h1,
@@ -125,5 +127,147 @@ header .site-typemark {
 
 header .site-slogan {
   font-weight: 100;
+}
+
+.todo-list {
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo-list .todo-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.todo-list .todo-item .main-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+}
+
+.todo-list .todo-item .main-info .checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding-left: 2rem;
+  margin-right: 1rem;
+}
+
+.todo-list .todo-item .main-info .checkbox input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.todo-list .todo-item .main-info .checkbox .checkmark {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+@media (hover: hover) {
+  .todo-list .todo-item .main-info .checkbox:hover .checkmark {
+    background-color: #ccc;
+  }
+}
+
+.todo-list .todo-item .main-info .todo-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.todo-list .todo-item .main-info .category {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+
+.todo-list .todo-item .more-info {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.todo-list .todo-item .more-info.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 500px;
+  padding: 0.5rem 1rem;
+}
+
+.todo-list .todo-item .more-info .date-and-details {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.todo-list .todo-item .more-info .date-and-details .date-due {
+  padding: 0.4rem 0;
+}
+
+.todo-list .todo-item .more-info .date-and-details .date-due span {
+  font-weight: 700;
+}
+
+.todo-list .todo-item .more-info .tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-left: 1rem;
+}
+
+.todo-list .todo-item .more-info .tag-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  width: 100%;
+}
+
+.todo-list .todo-item .more-info .tag-list .tag {
+  background-color: #cd7f02;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+  margin-bottom: 0.4rem;
+  margin-right: 0.4rem;
+  color: white;
+  font-weight: 700;
+}
+
+.todo-list .todo-item.done .main-info .checkbox .checkmark {
+  background-color: #4ad253;
+}
+
+.todo-list .todo-item.done .main-info .checkbox .checkmark::after {
+  content: "✓";
+  color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5px;
 }
 /*# sourceMappingURL=main.css.map */

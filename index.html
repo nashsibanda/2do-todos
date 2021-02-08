@@ -14,25 +14,29 @@
     </header>
     <main>
       <ul class="todo-list">
-        <li class="todo-item">
+        <li class="todo-item done">
           <div class="main-info">
-            <div class="checkbox"></div>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
             <h3 class="todo-title">Get groceries from the shops</h3>
             <button class="category">🏡</button>
           </div>
-          <div class="more-info">
-            <div class="date-due">Due: <span>23/02/2021</span></div>
-            <div class="details-and-tags">
+          <div class="more-info show">
+            <div class="date-and-details">
+              <div class="date-due">Due: <span>23/02/2021</span></div>
               <div class="details">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Perspiciatis modi quos adipisci ea. Ex unde, assumenda soluta.
               </div>
-              <ul class="tag-list">
-                <li class="tag">food</li>
-                <li class="tag">home</li>
-                <li class="tag">kids</li>
-              </ul>
             </div>
+            <ul class="tag-list">
+              <h3>Tags</h3>
+              <li class="tag">food</li>
+              <li class="tag">home</li>
+              <li class="tag">kids</li>
+            </ul>
           </div>
         </li>
       </ul>
