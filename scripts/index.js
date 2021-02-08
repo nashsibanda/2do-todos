@@ -71,43 +71,47 @@ function addTodoToStorage(newTodo) {
 function getTodosFromStorage() {
   if (localStorage.key("todos")) {
     const savedTodos = JSON.parse(localStorage.getItem("todos"));
-    window.todos = savedTodos;
+    if (savedTodos) {
+      window.todos = savedTodos;
+    } else {
+      window.todos = {
+        1: {
+          done: false,
+          "todo-title": "Clean the garage",
+          "todo-description": "Time to clean out the filthy garage!",
+          "todo-due": "2021-02-13",
+          "todo-category": "home",
+          "todo-tags": ["home", "cleaning"],
+          "": "",
+        },
+        2: {
+          done: false,
+          "todo-title": "Zoom pub quiz with friends",
+          "todo-description":
+            "Have a nice few drinks and some crazy trivia with the gang 😁",
+          "todo-due": "2021-02-12",
+          "todo-category": "social",
+          "todo-tags": ["fun", "relax", "after work"],
+          "": "",
+        },
+        3: {
+          done: false,
+          "todo-title": "Finish working on Todo App",
+          "todo-description": "Get this todo app working nicely",
+          "todo-due": "2021-02-09",
+          "todo-category": "work",
+          "todo-tags": ["javascript", "css", "html", "a bit of sass"],
+          "": "",
+        },
+      };
+    }
   }
 }
 
 function refreshTodoList() {
   let todos = window.todos;
   if (!todos) {
-    todos = {
-      1: {
-        done: false,
-        "todo-title": "Clean the garage",
-        "todo-description": "Time to clean out the filthy garage!",
-        "todo-due": "2021-02-13",
-        "todo-category": "home",
-        "todo-tags": ["home", "cleaning"],
-        "": "",
-      },
-      2: {
-        done: false,
-        "todo-title": "Zoom pub quiz with friends",
-        "todo-description":
-          "Have a nice few drinks and some crazy trivia with the gang 😁",
-        "todo-due": "2021-02-12",
-        "todo-category": "social",
-        "todo-tags": ["fun", "relax", "after work"],
-        "": "",
-      },
-      3: {
-        done: false,
-        "todo-title": "Finish working on Todo App",
-        "todo-description": "Get this todo app working nicely",
-        "todo-due": "2021-02-09",
-        "todo-category": "work",
-        "todo-tags": ["javascript", "css", "html", "a bit of sass"],
-        "": "",
-      },
-    };
+    return false;
   }
   console.log("refreshing...");
   const todoKeys = Object.keys(todos);
