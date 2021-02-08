@@ -8,12 +8,12 @@
     <title>2Do - Get Stuff Done</title>
   </head>
   <body>
-    <div id="form-modal" class="show">
-      <div id="form-container">
-        <button class="modal-close">+</button>
+    <div id="form-modal" class="">
+      <div id="form-container" onclick="event.stopPropagation()">
+        <button id="modal-close">+</button>
         <!-- TODO Add form submit disable -->
         <h2>Add a task</h2>
-        <form action="">
+        <form action="" id="todo-form" onsubmit="event.preventDefault();">
           <div class="form-group">
             <label for="todo-title">Title</label>
             <input
@@ -51,9 +51,9 @@
                 name="todo-tags"
                 id="todo-tags"
                 placeholder="Add some tags..."
-              /><button type="button">+</button>
+              /><button type="button" id="tag-submit-button">+</button>
             </div>
-            <ul class="form-tag-list"></ul>
+            <ul id="form-tag-list"></ul>
           </div>
           <button type="submit" id="todo-form-submit">Add Task</button>
         </form>
@@ -64,8 +64,8 @@
       <h2 class="site-slogan">Get Stuff Done</h2>
     </header>
     <main>
-      <ul class="todo-list">
-        <li class="todo-item done">
+      <ul id="todo-list">
+        <li class="todo-item">
           <div class="main-info">
             <label class="checkbox">
               <input type="checkbox" />
@@ -97,5 +97,6 @@
       <p>A site by Nash Sibanda</p>
       <a href="https://nashsibanda.com" target="_blank">nashsibanda.com</a>
     </footer>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

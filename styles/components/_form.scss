@@ -8,7 +8,7 @@
   z-index: 4;
   align-items: center;
   display: none;
-  
+
   &.show {
     display: flex;
   }
@@ -22,7 +22,7 @@
     position: relative;
     overflow: scroll;
 
-    .modal-close {
+    #modal-close {
       position: absolute;
       font-size: 2rem;
       font-weight: 700;
@@ -96,6 +96,31 @@
       padding: 0.5rem;
       width: fit-content;
       align-self: center;
+    }
+
+    #form-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0.3rem;
+
+      li {
+        background-color: $yellow;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.6rem;
+        margin-bottom: 0.4rem;
+        margin-right: 0.4rem;
+        color: white;
+        font-weight: 700;
+        display: flex;
+
+        &::after {
+          content: "+";
+          display: inline-block;
+          transform: rotate(45deg);
+          font-size: 1.3rem;
+          margin-left: 0.3rem;
+        };
+      }
     }
   }
 }
