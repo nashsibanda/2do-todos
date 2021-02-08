@@ -120,10 +120,24 @@ h3 {
   font-weight: 700;
   padding: 0 1rem;
   border-radius: 50%;
-  background: #52b0e9;
+  background-color: #52b0e9;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  -webkit-transition: 0.5s -webkit-transform ease-in-out;
+  transition: 0.5s -webkit-transform ease-in-out;
+  transition: 0.5s transform ease-in-out;
+  transition: 0.5s transform ease-in-out, 0.5s -webkit-transform ease-in-out;
+  -webkit-transition: 0.5s background-color ease-in-out;
+  transition: 0.5s background-color ease-in-out;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#add-todo-button.close {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #ca3218;
 }
 
 header {
