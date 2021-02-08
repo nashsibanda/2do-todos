@@ -252,6 +252,8 @@ header .site-slogan {
 #todo-list .todo-item .main-info .category {
   margin-left: 1rem;
   font-size: 1.3rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 #todo-list .todo-item .more-info {
