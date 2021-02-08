@@ -76,11 +76,40 @@ function getTodosFromStorage() {
 }
 
 function refreshTodoList() {
-  const todos = window.todos;
+  let todos = window.todos;
   if (!todos) {
-    return false;
+    todos = {
+      1: {
+        done: false,
+        "todo-title": "Clean the garage",
+        "todo-description": "Time to clean out the filthy garage!",
+        "todo-due": "2021-02-13",
+        "todo-category": "home",
+        "todo-tags": ["home", "cleaning"],
+        "": "",
+      },
+      2: {
+        done: false,
+        "todo-title": "Zoom pub quiz with friends",
+        "todo-description":
+          "Have a nice few drinks and some crazy trivia with the gang 😁",
+        "todo-due": "2021-02-12",
+        "todo-category": "social",
+        "todo-tags": ["fun", "relax", "after work"],
+        "": "",
+      },
+      3: {
+        done: false,
+        "todo-title": "Finish working on Todo App",
+        "todo-description": "Get this todo app working nicely",
+        "todo-due": "2021-02-09",
+        "todo-category": "work",
+        "todo-tags": ["javascript", "css", "html", "a bit of sass"],
+        "": "",
+      },
+    };
   }
-  console.log("refreshing...")
+  console.log("refreshing...");
   const todoKeys = Object.keys(todos);
   const todoList = document.getElementById("todo-list");
   while (todoList.firstChild) {
@@ -102,7 +131,7 @@ function refreshTodoList() {
     checkbox.classList.add("checkbox");
     const checkboxInput = document.createElement("input");
     checkboxInput.setAttribute("type", "checkbox");
-    checkbox.appendChild(checkboxInput)
+    checkbox.appendChild(checkboxInput);
     const checkboxSpan = document.createElement("span");
     checkboxSpan.classList.add("checkmark");
     checkbox.appendChild(checkboxSpan);
@@ -131,7 +160,7 @@ function refreshTodoList() {
     // Date and details
     const dateDue = document.createElement("div");
     dateDue.classList.add("date-due");
-    dateDue.innerText = "Due: "
+    dateDue.innerText = "Due: ";
     const dateSpan = document.createElement("span");
     dateSpan.textContent = todo["todo-due"];
     dateDue.appendChild(dateSpan);
@@ -165,32 +194,32 @@ function refreshTodoList() {
 }
 
 function toggleDone(key) {
-  return function(event) {
+  return function (event) {
     event.preventDefault();
     const todo = window.todos[key];
     todo["done"] = !todo["done"];
-    console.log("hi")
-    console.log(todo)
+    console.log("hi");
+    console.log(todo);
     localStorage.setItem("todos", JSON.stringify(window.todos));
     refreshTodoList();
-  }
+  };
 }
 
 function toggleShow(details) {
-  return function(event) {
+  return function (event) {
     event.preventDefault();
     details.classList.toggle("show");
-  }
+  };
 }
 
 function getCategoryIcon(category) {
   switch (category) {
     case "work":
-      return "💼"
+      return "💼";
     case "home":
       return "🏡";
     case "social":
-      return "🥳"
+      return "🥳";
     default:
       return "";
   }
