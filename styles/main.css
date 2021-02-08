@@ -98,7 +98,7 @@ main {
   padding: 1rem 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 h1,
@@ -191,6 +191,8 @@ header .site-slogan {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: scroll;
+  height: 100%;
 }
 
 #todo-list .todo-item {
@@ -198,6 +200,7 @@ header .site-slogan {
   padding: 1rem;
   border-radius: 0.4rem;
   margin-bottom: 1rem;
+  overflow: unset;
 }
 
 #todo-list .todo-item .main-info {

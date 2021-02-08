@@ -4,12 +4,15 @@
   max-width: 800px;
   display: flex;
   flex-direction: column;
+  overflow: scroll;
+  height: 100%;
   
   .todo-item {
     background-color: #fff;
     padding: 1rem;
     border-radius: 0.4rem;
     margin-bottom: 1rem;
+    overflow: unset;
 
     .main-info {
       display: flex;
