@@ -346,12 +346,16 @@ footer {
   left: 0;
   right: 0;
   z-index: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
+}
+
+#form-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #form-modal #form-container {
@@ -376,6 +380,10 @@ footer {
   right: 1rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#form-modal #form-container h2 {
+  margin-bottom: 1rem;
 }
 
 #form-modal form {
