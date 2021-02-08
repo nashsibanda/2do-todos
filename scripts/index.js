@@ -73,38 +73,38 @@ function getTodosFromStorage() {
     const savedTodos = JSON.parse(localStorage.getItem("todos"));
     if (savedTodos) {
       window.todos = savedTodos;
-    } else {
-      window.todos = {
-        1: {
-          done: false,
-          "todo-title": "Clean the garage",
-          "todo-description": "Time to clean out the filthy garage!",
-          "todo-due": "2021-02-13",
-          "todo-category": "home",
-          "todo-tags": ["home", "cleaning"],
-          "": "",
-        },
-        2: {
-          done: false,
-          "todo-title": "Zoom pub quiz with friends",
-          "todo-description":
-            "Have a nice few drinks and some crazy trivia with the gang 😁",
-          "todo-due": "2021-02-12",
-          "todo-category": "social",
-          "todo-tags": ["fun", "relax", "after work"],
-          "": "",
-        },
-        3: {
-          done: false,
-          "todo-title": "Finish working on Todo App",
-          "todo-description": "Get this todo app working nicely",
-          "todo-due": "2021-02-09",
-          "todo-category": "work",
-          "todo-tags": ["javascript", "css", "html", "a bit of sass"],
-          "": "",
-        },
-      };
     }
+  } else {
+    window.todos = {
+      1: {
+        done: false,
+        "todo-title": "Clean the garage",
+        "todo-description": "Time to clean out the filthy garage!",
+        "todo-due": "2021-02-13",
+        "todo-category": "home",
+        "todo-tags": ["home", "cleaning"],
+        "": "",
+      },
+      2: {
+        done: false,
+        "todo-title": "Zoom pub quiz with friends",
+        "todo-description":
+          "Have a nice few drinks and some crazy trivia with the gang 😁",
+        "todo-due": "2021-02-12",
+        "todo-category": "social",
+        "todo-tags": ["fun", "relax", "after work"],
+        "": "",
+      },
+      3: {
+        done: false,
+        "todo-title": "Finish working on Todo App",
+        "todo-description": "Get this todo app working nicely",
+        "todo-due": "2021-02-09",
+        "todo-category": "work",
+        "todo-tags": ["javascript", "css", "html", "a bit of sass"],
+        "": "",
+      },
+    };
   }
 }
 
