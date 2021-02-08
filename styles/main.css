@@ -149,7 +149,7 @@ input[type="text"],
 input[type="date"],
 textarea, select {
   border: 1px solid lightgray;
-  padding: 0.4rem;
+  padding: 0.7rem;
   border-radius: 0.2rem;
 }
 
@@ -191,7 +191,7 @@ header .site-slogan {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
 }
 
@@ -372,7 +372,7 @@ footer {
   margin: 0 auto;
   padding: 2rem 2rem 1rem;
   position: relative;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #form-modal #form-container #modal-close {
@@ -401,6 +401,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: unset;
 }
 
 #form-modal form > * {
@@ -434,8 +435,8 @@ footer {
 }
 
 #form-modal form .form-group.inline input {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-negative: 0.3;
+      flex-shrink: 0.3;
 }
 
 #form-modal form .form-group label {
