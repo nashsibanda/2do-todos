@@ -8,6 +8,57 @@
     <title>2Do - Get Stuff Done</title>
   </head>
   <body>
+    <div id="form-modal">
+      <div id="form-container">
+        <button class="modal-close">+</button>
+        <!-- TODO Add form submit disable -->
+        <form action="">
+          <h2>Add a task</h2>
+          <div class="form-group">
+            <label for="todo-title">Title</label>
+            <input
+              type="text"
+              name="todo-title"
+              id="todo-title"
+              placeholder="A nice, short title..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="todo-title">Description</label>
+            <textarea
+              name="todo-description"
+              id="todo-description"
+              placeholder="Add some extra details about this task..."
+            ></textarea>
+          </div>
+          <div class="form-group inline">
+            <label for="todo-title">Date due</label>
+            <input type="date" name="todo-due" id="todo-due" />
+          </div>
+          <div class="form-group">
+            <label for="todo-title">Category</label>
+            <select name="todo-category" id="todo-category">
+              <option value="work">💼 &nbsp;&nbsp;&nbsp; Work</option>
+              <option value="home">🏡 &nbsp;&nbsp;&nbsp; Home</option>
+              <option value="social">🥳 &nbsp;&nbsp;&nbsp; Social</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="todo-tags">Tags</label>
+            <div class="input-with-submit">
+              <input
+                type="text"
+                name="todo-tags"
+                id="todo-tags"
+                placeholder="Add some tags..."
+              /><button type="button">+</button>
+            </div>
+            <ul class="form-tag-list"></ul>
+          </div>
+          <button type="submit" id="todo-form-submit">Add Task</button>
+        </form>
+      </div>
+    </div>
     <header>
       <h1 class="site-typemark">2Do</h1>
       <h2 class="site-slogan">Get Stuff Done</h2>
@@ -40,7 +91,7 @@
           </div>
         </li>
       </ul>
-      <button id="add-todo-button" class="close">+</button>
+      <button id="add-todo-button">+</button>
     </main>
     <footer>
       <p>A site by Nash Sibanda</p>

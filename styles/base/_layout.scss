@@ -4,6 +4,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  position: relative;
+}
+
 main {
   position: relative;
   height: calc(100% - #{$header-height} - #{$footer-height});
@@ -47,4 +51,12 @@ h3 {
     transform: rotate(45deg);
     background-color: $red;
   }
+}
+
+input[type="text"],
+input[type="date"],
+textarea, select {
+  border: 1px solid lightgray;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
 }

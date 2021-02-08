@@ -88,6 +88,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  position: relative;
+}
+
 main {
   position: relative;
   height: calc(100% - 11rem - 3rem);
@@ -138,6 +142,14 @@ h3 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background-color: #ca3218;
+}
+
+input[type="text"],
+input[type="date"],
+textarea, select {
+  border: 1px solid lightgray;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
 }
 
 header {
@@ -324,5 +336,130 @@ footer {
           align-items: center;
   font-weight: 700;
   padding: 0 1.5rem;
+}
+
+#form-modal {
+  position: absolute;
+  background-color: #42424299;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form-modal #form-container {
+  background-color: #fff;
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+  padding: 2rem 2rem 1rem;
+  position: relative;
+  overflow: scroll;
+}
+
+#form-modal #form-container .modal-close {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 0.6rem;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#form-modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#form-modal form > * {
+  margin-bottom: 1rem;
+}
+
+#form-modal form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#form-modal form .form-group.inline {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#form-modal form .form-group.inline label {
+  margin-right: 1rem;
+}
+
+#form-modal form .form-group.inline input {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+#form-modal form .form-group label {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+#form-modal form .form-group .input-with-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#form-modal form .form-group .input-with-submit input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 0.5rem;
+}
+
+#form-modal form .form-group .input-with-submit button {
+  border-radius: 6px;
+}
+
+#form-modal form .category-label {
+  margin-left: 1rem;
+}
+
+#form-modal form button {
+  background-color: #52b0e9;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=main.css.map */
