@@ -201,6 +201,18 @@ header .site-slogan {
   border-radius: 0.4rem;
   margin-bottom: 1rem;
   overflow: unset;
+  position: relative;
+}
+
+#todo-list .todo-item .todo-delete-button {
+  position: absolute;
+  right: 1rem;
+  top: 0.4rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  font-weight: 700;
+  color: #ca3218;
+  font-size: 1.3rem;
 }
 
 #todo-list .todo-item .main-info {

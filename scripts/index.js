@@ -126,6 +126,11 @@ function refreshTodoList() {
     if (todo["done"]) {
       todoItem.classList.add("done");
     }
+    const deleteButton = document.createElement("button");
+    deleteButton.classList.add("todo-delete-button");
+    deleteButton.textContent = "+";
+    deleteButton.addEventListener("click", deleteTodo(key));
+    todoItem.appendChild(deleteButton);
     const mainInfo = document.createElement("div");
     mainInfo.classList.add("main-info");
 
@@ -205,6 +210,19 @@ function toggleDone(key) {
     console.log("hi");
     console.log(todo);
     localStorage.setItem("todos", JSON.stringify(window.todos));
+    refreshTodoList();
+  };
+}
+
+function deleteTodo(key) {
+  return function (event) {
+    const todoKeys = Object.keys(window.todos).filter(k => k !== key);
+    const newTodos = {};
+    for (const filteredKey of todoKeys) {
+      newTodos[filteredKey] = window.todos[filteredKey];
+    }
+    window.todos = newTodos;
+    localStorage.setItem("todos", JSON.stringify(newTodos));
     refreshTodoList();
   };
 }

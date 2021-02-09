@@ -13,6 +13,17 @@
     border-radius: 0.4rem;
     margin-bottom: 1rem;
     overflow: unset;
+    position: relative;
+
+    .todo-delete-button {
+      position: absolute;
+      right: 1rem;
+      top: 0.4rem;
+      transform: rotate(45deg);
+      font-weight: 700;
+      color: $red;
+      font-size: 1.3rem;
+    }
 
     .main-info {
       display: flex;
